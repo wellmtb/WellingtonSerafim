@@ -1,28 +1,39 @@
 body{
+    background: linear-gradient(to bottom right,  #7159c1 50%,blue , rgb(129, 245, 129));
     background-size: auto 100vh;
-    background: linear-gradient(to bottom right,  #7159c1 50%,blue);
     background-repeat: no-repeat;
-    height: 100vh;
-    }
+}
 
+    
    a{
     text-decoration: none;
-    color: white
+    color: black;
    }
 
    a:hover {
     text-decoration: underline;
    }
 
-   .menu{
-      
+ .menu{
+    
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.3;
+   
 }
 
-   .menu ul {
+.menu:hover{
+ opacity: 1;
+ transition: 1s;
+ transition-delay: 0;
+}
+
+
+.menu ul {
        display: flex;
        justify-content: space-around;
     }
-   .menu li{
+.menu li{
        list-style: none;
        font-family: 'Balsamiq Sans', cursive;
    }
