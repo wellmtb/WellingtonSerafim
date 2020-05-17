@@ -13,19 +13,18 @@ a{
 a:hover {
  text-decoration: underline;
 }
-/* Reset CSS */
+
 body{
-    
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    font-size: 10px;
+    font-family: 'Roboto Mono', monospace;
 
-    /* Colors generated on: https://colorhunt.co/palette/179481 */
     background: linear-gradient(45deg, rgb(132, 93, 240) 50%, rgba(0,212,255,1) 100%);
-    background-size: 300% 300%;
-    animation: colors 15s ease infinite;
+    background-size: 500% 500%;
+    background-repeat: no-repeat;
+    animation: colors 8s ease infinite;
   }
 
   @keyframes colors {
@@ -42,15 +41,22 @@ body{
 
 
 /*Breakpoints */
-@media(min-width:400px){
+@media(min-width:0px){
     body{
         font-size: 10px;
     }
 
 }
+
 @media(min-width:600px){
     body{
         font-size: 14px;
+    }
+}
+
+@media(min-width:800px){
+    body{
+        font-size: 16px;
     }
 
 }
@@ -66,7 +72,7 @@ header{
     position:fixed;
     border-radius: 10px;
     background-color: white;
-    opacity: 0.6;
+    opacity: 0.7;
     width: 90vw;
     top:0;
     margin-top: 5px;
@@ -88,13 +94,18 @@ header{
     }
 .menu li{
        list-style: none;
-       font-family: 'Balsamiq Sans', cursive;
+       font-family: 'Roboto', sans-serif;
    }
 
    .menu a{
     display: block;   
     padding:10px;
-    font-size: 12px;
+    font-size: 1.1em;
+    font-family: 'Roboto Mono', monospace;
+   }
+
+   .site-title{
+    font-family: 'Caveat', cursive;
    }
 
 .site-title, .site-subtitle{
@@ -103,18 +114,104 @@ header{
     margin:10px;
    }
 
+
 .site-subtitle{
     font-style: italic;
+    font-family: 'Fredoka One', cursive;
+
 }
 
-.portifolio{
-   
-   
-}
 
 .title{
     border:solid 1px;
     border-color: white;
     padding: 5px;
+    
     font-size: 2em;
+    border-radius: 20px;
+    
 }
+
+.title:hover{
+    transition: 1s;
+    transform: rotate(360deg) ;
+   
+    
+}
+
+/*Paginas e sections*/
+.about-me, .contact {
+    Display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    
+}
+.about-me h2 , .contact h2{
+    font-family: 'Merienda One', cursive;
+    margin: 1em; 
+   
+}
+.about-me content, .contact content {
+    width: 90vw;
+    height: 80vh;
+    background-color: white;
+    border: solid black 0.5px;
+    border-radius: 20px;;
+    opacity: 0.8;
+}
+
+.about-me figure{
+    margin:1.4em;
+   text-align: center;
+}  
+
+.about-me .grid{  
+display: grid;
+gap:2em;
+grid-template-columns: 30vw 45vw ;
+
+}
+
+
+.img-aboutme {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 100%;
+  }
+
+  .personal-inf{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     
+  }
+  .name p{
+     margin-bottom: 1em;
+     font-size: 2em;
+   
+  }
+
+
+  .exp-bkg ul{
+    margin: 1em 0em 0em 3em  ;
+    
+  }
+
+  .exp-bkg, .personal-interests{
+    padding: 1em;
+    border: solid black 1px;
+    margin-top: 1em;
+    border-radius: 1em;
+  }
+
+  .personal-interests ul{
+    margin: 1em 0em 0em 3em  ;
+
+  }
+
+ 
