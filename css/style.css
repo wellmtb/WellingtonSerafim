@@ -22,9 +22,9 @@ body{
     font-family: 'Roboto Mono', monospace;
 
     background: linear-gradient(45deg, rgb(132, 93, 240) 50%, rgba(0,212,255,1) 100%);
-    background-size: 200% 200%;
+    background-size: 300% 300%;
     background-repeat: no-repeat;
-    animation: colors 8s ease infinite;
+    animation: colors 5s ease infinite;
   }
 
   @keyframes colors {
@@ -69,22 +69,21 @@ header{
     
 
  .menu{
-    position:fixed;
+    position: fixed;
     border-radius: 10px;
     background-color: white;
     opacity: 0.7;
     width: 90vw;
     top:0;
     margin-top: 5px;
-  
-   
-   
+    transition: 0.5s;
+    z-index: 1;
+      
 }
-
+.menu:active,
 .menu:hover{
  opacity: 1;
- transition: 1s;
- transition-delay: 0;
+ 
 }
 
 
@@ -146,7 +145,7 @@ header{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 90vh;
+    min-height: 90vh;
     
 }
 .about-me h2 , .contact h2{
@@ -154,9 +153,9 @@ header{
     margin: 1em; 
    
 }
-.about-me content, .contact content {
-    width: 90%;
-    height: 100%;
+.about-me content{
+    width: 90vw;
+    height: 100vh;
     background-color: white;
     border: solid black 0.5px;
     border-radius: 20px;;
@@ -175,7 +174,7 @@ display: grid;
 gap:2em;
 
 }
-
+/*Media para grid em dispositivos moveis*/
 @media(min-width: 560px){
     .about-me .grid{  
         display: grid;
@@ -190,9 +189,6 @@ gap:2em;
     object-position: left bottom;
     border-radius: 100%;
   }
-
-  
-
   .personal-inf{
       display: flex;
       flex-direction: column;
@@ -204,23 +200,47 @@ gap:2em;
      font-size: 2em;
    
   }
-
-
   .exp-bkg ul{
     margin: 1em 0em 0em 3em  ;
     
   }
-
   .exp-bkg, .personal-interests{
     padding: 1em;
     border: solid black 1px;
     margin-top: 1em;
     border-radius: 1em;
   }
-
   .personal-interests ul{
     margin: 1em 0em 0em 3em  ;
 
   }
 
- 
+  .contact content {
+    width: 90vw;
+    height: 50vh;
+    background-color: white;
+    border: solid black 0.5px;
+    border-radius: 20px;;
+    opacity: 0.8;
+    margin:2em;
+    padding: 1em;
+}
+
+
+  .contact a{
+      font-size: 5em;
+      transition: 1s;
+  }
+
+  .contact a:active,
+  .contact a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(140, 4, 173, 0.932);
+    opacity: 1;
+   
+   
+  }
+
+  .grid-icons{
+    text-align: center;
+  }
