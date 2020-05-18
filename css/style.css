@@ -155,7 +155,7 @@ header{
 }
 .about-me content{
     width: 90vw;
-    min-height: 100%;
+    min-height: 30vh;
     background-color: white;
     border: solid black 0.5px;
     border-radius: 20px;;
